@@ -4,6 +4,8 @@ var User = require("../models/user");
 var Campground = require("../models/campground");
 var passport = require("passport");
 
+var adminKey = process.env.ADMIN_CODE;
+
 router.get("/",function(req,res){
    res.render("landing");
 });
@@ -25,7 +27,7 @@ router.post("/register",function(req, res) {
             avatar: req.body.avatar
         });
     
-    if (req.body.adminCode === 'theAdminCode'){
+    if (req.body.adminCode === adminKey){
         newUser.isAdmin = 'true';
     }
     User.register(newUser,req.body.password, function(err,user){
@@ -35,7 +37,7 @@ router.post("/register",function(req, res) {
        }
        
        passport.authenticate("local")(req,res,function(){
-           req.flash("success", "Welcome to YelpCamp" + user.username);
+           req.flash("success", "Welcome to YelpCamp: " + user.username);
            res.redirect("/campgrounds");
        })
    });
