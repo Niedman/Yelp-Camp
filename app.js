@@ -21,7 +21,13 @@ var commentRoutes       = require("./routes/comments"),
 
 //Seed the DB
 //seedDB();
-mongoose.connect("mongodb://localhost/yelp_camp",{ useNewUrlParser: true });
+var dbuser = process.env.DB_USER;
+var dbpassword = process.env.DB_PASS;
+
+
+//mongoose.connect("mongodb://localhost/yelp_camp",{ useNewUrlParser: true });
+mongoose.connect("mongodb://dbuser:dbpassword@ds113003.mlab.com:13003/niedmanyelpcamp",{ useNewUrlParser: true });
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
