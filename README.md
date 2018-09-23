@@ -10,7 +10,7 @@ Yelp Camp in Node.js + Express + MongoDB
 
 **Home Page**
 
-[![Image from Gyazo](https://i.gyazo.com/5c888d57e82384640b23f2e559873559.png)](https://gyazo.com/5c888d57e82384640b23f2e559873559)
+[![Image from Gyazo](https://i.gyazo.com/17ff36580eedd8a0dbbd8ca8aa3a0d13.png)](https://gyazo.com/17ff36580eedd8a0dbbd8ca8aa3a0d13)
 
 **Campgrounds Page**
 
