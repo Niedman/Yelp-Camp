@@ -28,8 +28,8 @@ var dbpassword = process.env.DB_PASS;
 
 //mongoose.connect("mongodb://"+dbuser+":"+dbpassword+"@ds113003.mlab.com:13003/niedmanyelpcamp",{ useNewUrlParser: true });
 
-var mongoDB = "mongodb://dbuser:dbpass1@ds113003.mlab.com:13003/niedmanyelpcamp";
-//var mongoDB = "mongodb://"+dbuser+":"+dbpassword+"@ds113003.mlab.com:13003/niedmanyelpcamp";
+//var mongoDB = "mongodb://dbuser:dbpass1@ds113003.mlab.com:13003/niedmanyelpcamp";
+var mongoDB = "mongodb://"+dbuser+":"+dbpassword+"@ds113003.mlab.com:13003/niedmanyelpcamp";
 
 mongoose.connect(mongoDB, {
     useNewUrlParser: true
